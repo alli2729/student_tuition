@@ -7,7 +7,10 @@ class Semester {
   List<Course> courses = [];
 
   // Constractor
-  Semester({required this.id, required this.title});
+  Semester({
+    required this.id,
+    required this.title,
+  });
 
   // Methods
   @override

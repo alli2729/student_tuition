@@ -4,7 +4,10 @@ class Location {
   final int id;
 
   // Constractor
-  Location({required this.title, required this.id});
+  Location({
+    required this.title,
+    required this.id,
+  });
 
   // Methods
   @override

@@ -9,7 +9,11 @@ class University {
   final id;
 
   // Constractor
-  University({required this.location, required this.name, required this.id});
+  University({
+    required this.location,
+    required this.name,
+    required this.id,
+  });
 
   // Methods
   @override

@@ -5,7 +5,11 @@ class Course {
   int unitCount;
 
   // Constractor
-  Course({required this.title, required this.id, required this.unitCount});
+  Course({
+    required this.title,
+    required this.id,
+    required this.unitCount,
+  });
   // Methods
 
   @override

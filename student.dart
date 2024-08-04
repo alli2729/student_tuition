@@ -4,7 +4,10 @@ class Student {
   final int id;
 
   // Constractor
-  Student({required this.name, required this.id});
+  Student({
+    required this.name,
+    required this.id,
+  });
 
   // Methods
   @override
