@@ -1,16 +1,15 @@
 abstract class Course {
-  // Variabl e
+  // Variables
   String title;
   int id;
-  // int unitCount;
 
   // Constractor
   Course({
     required this.title,
     required this.id,
   });
-  // Methods
 
+  // Methods
   @override
   String toString() {
     return 'title: $title , id: $id';
