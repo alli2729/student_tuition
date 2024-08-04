@@ -35,8 +35,13 @@ class University {
         _semester.indexWhere((element) => element.id == semesterId);
     final semesterFound = semesterIndex != -1;
     if (semesterFound) {
-      _semester[semesterIndex].addCourse(
-          title: courseTitle, id: courseId, unitCount: courseUnitCount);
+      if (courseUnitCount == 2) {
+        _semester[semesterIndex]
+            .addGeneralCourse(title: courseTitle, id: courseId);
+      } else {
+        _semester[semesterIndex]
+            .addSpecializedCourse(title: courseTitle, id: courseId);
+      }
     }
   }
 
