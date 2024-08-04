@@ -1,4 +1,5 @@
 import 'course.dart';
+import 'specialized_course.dart';
 
 class Semester {
   // Variable
@@ -13,9 +14,13 @@ class Semester {
   });
 
   // Methods
-  void addCourse(
-      {required String title, required int id, required int unitCount}) {
-    final newCourse = Course(title: title, id: id, unitCount: unitCount);
+  void addGeneralCourse({required String title, required int id}) {
+    final newCourse = SpecializedCourse(title: title, id: id);
+    _courses.add(newCourse);
+  }
+
+  void addSpecializedCourse({required String title, required int id}) {
+    final newCourse = SpecializedCourse(title: title, id: id);
     _courses.add(newCourse);
   }
 
