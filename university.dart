@@ -1,12 +1,14 @@
 import 'location.dart';
 import 'semester.dart';
+import 'student.dart';
 
 class University {
   // Variable
   final Location location;
   final List<Semester> _semester = [];
-  final name;
-  final id;
+  final List<Student> _students = [];
+  final String name;
+  final int id;
 
   // Constractor
   University({
@@ -19,6 +21,12 @@ class University {
   void addSemester({required int id, required String title}) {
     final newSemester = Semester(id: id, title: title);
     _semester.add(newSemester);
+  }
+
+  void addStudent(
+      {required String name, required int id, required Location location}) {
+    final newStudent = Student(name: name, id: id, location: location);
+    _students.add(newStudent);
   }
 
   @override
@@ -47,4 +55,5 @@ class University {
 
   // Getters
   List<Semester> get Semesters => _semester;
+  List<Student> get Students => _students;
 }
