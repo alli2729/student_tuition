@@ -25,4 +25,8 @@ void main(List<String> args) {
     title: 'Ping Pong',
     id: 1002,
   );
+
+  // add students
+  taaviUniversity.addStudent(name: 'ali karimi', id: 1, location: shiraz);
+  taaviUniversity.addStudent(name: 'sina rezaei', id: 2, location: shiraz);
 }
