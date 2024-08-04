@@ -1,1 +1,2 @@
-# student_tuition
+# Student Tuition
+calculating tuition of a student 
