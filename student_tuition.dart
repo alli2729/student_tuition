@@ -1,4 +1,4 @@
-class StudentSemesterCostCalculator {
+class StudentTuition {
   // Variable
 
   // Constractor
