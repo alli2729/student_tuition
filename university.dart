@@ -26,6 +26,20 @@ class University {
     return 'location: $location , name: $name , id: $id , semesters: $_semester';
   }
 
+  void addCourseToSemesterById(
+      {required int semesterId,
+      required int courseId,
+      required int courseUnitCount,
+      required String courseTitle}) {
+    final int semesterIndex =
+        _semester.indexWhere((element) => element.id == semesterId);
+    final semesterFound = semesterIndex != -1;
+    if (semesterFound) {
+      _semester[semesterIndex].addCourse(
+          title: courseTitle, id: courseId, unitCount: courseUnitCount);
+    }
+  }
+
   // Getters
   List<Semester> get Semesters => _semester;
 }
