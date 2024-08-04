@@ -16,6 +16,6 @@ class Student {
   // Methods
   @override
   String toString() {
-    return 'name: $name , id: $id';
+    return 'name: $name , id: $id , location: $location';
   }
 }
