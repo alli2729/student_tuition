@@ -4,7 +4,7 @@ class Semester {
   // Variable
   int id;
   String title;
-  List<Course> courses = [];
+  List<Course> _courses = [];
 
   // Constractor
   Semester({
@@ -13,8 +13,14 @@ class Semester {
   });
 
   // Methods
+  void addCourse(
+      {required String title, required int id, required int unitCount}) {
+    final newCourse = Course(title: title, id: id, unitCount: unitCount);
+    _courses.add(newCourse);
+  }
+
   @override
   String toString() {
-    return 'id: $id , title: $title , course: $courses';
+    return 'id: $id , title: $title , course: $_courses';
   }
 }

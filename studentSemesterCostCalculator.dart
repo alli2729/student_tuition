@@ -5,8 +5,8 @@ class StudentSemesterCostCalculator {
 
   // Methods
   // TODO :(calculate semester cost)
-  
-    @override
+
+  @override
   String toString() {
     // TODO: implement toString
     return '';

@@ -4,7 +4,7 @@ import 'semester.dart';
 class University {
   // Variable
   final Location location;
-  final List<Semester> semester = [];
+  final List<Semester> _semester = [];
   final name;
   final id;
 
@@ -16,6 +16,11 @@ class University {
   });
 
   // Methods
+  void addSemester({required int id, required String title}) {
+    final newSemester = Semester(id: id, title: title);
+    _semester.add(newSemester);
+  }
+
   @override
   String toString() {
     return 'location: $location , name: $name , id: $id';
