@@ -23,6 +23,9 @@ class University {
 
   @override
   String toString() {
-    return 'location: $location , name: $name , id: $id';
+    return 'location: $location , name: $name , id: $id , semesters: $_semester';
   }
+
+  // Getters
+  List<Semester> get Semesters => _semester;
 }
