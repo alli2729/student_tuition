@@ -2,9 +2,9 @@ import 'student.dart';
 
 abstract class Course {
   // Variables
-  String title;
-  int id;
-  List<Student> _studentInCourse = [];
+  final String title;
+  final int id;
+  static final List<Student> _studentInCourse = [];
 
   // Constractor
   Course({
@@ -23,5 +23,5 @@ abstract class Course {
   }
 
   // Getters
-  List<Student> get studentInCourse => _studentInCourse;
+  static List<Student> get studentInCourse => _studentInCourse;
 }
