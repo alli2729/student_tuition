@@ -16,22 +16,26 @@ class Semester {
   });
 
   // Methods
-  void addGeneralCourse({required String title, required int id}) {
+  void addGeneralCourseByInfo({required String title, required int id}) {
     final newCourse = GeneralCourse(title: title, id: id);
     _courses.add(newCourse);
   }
 
-  void addSpecializedCourse({required String title, required int id}) {
+  void addSpecializedCourseByInfo({required String title, required int id}) {
     final newCourse = SpecializedCourse(title: title, id: id);
     _courses.add(newCourse);
   }
 
-  void addStudentToCourse({required Student s}) {
-    Course.studentInCourse.add(s);
+  void addCourse({required Course course}) {
+    _courses.add(course);
+  }
+
+  void addStudentToCourse({required Student student}) {
+    Course.studentInCourse.add(student);
   }
 
   @override
   String toString() {
-    return 'id: $id , title: $title , course: $_courses';
+    return 'id: $id , title: $title , course: $_courses, Students :${Course.studentInCourse}';
   }
 }
