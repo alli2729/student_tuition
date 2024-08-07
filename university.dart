@@ -18,15 +18,23 @@ class University {
   });
 
   // Methods
-  void addSemester({required int id, required String title}) {
+  void addSemesterByInfo({required int id, required String title}) {
     final newSemester = Semester(id: id, title: title);
     _semester.add(newSemester);
   }
 
-  void addStudent(
+  void addSemester({required Semester semester}) {
+    _semester.add(semester);
+  }
+
+  void addStudentByInfo(
       {required String name, required int id, required Location location}) {
     final newStudent = Student(name: name, id: id, location: location);
     _students.add(newStudent);
+  }
+
+  void addStudent({required Student student}) {
+    _students.add(student);
   }
 
   @override
@@ -45,10 +53,10 @@ class University {
     if (semesterFound) {
       if (courseUnitCount == 2) {
         _semester[semesterIndex]
-            .addGeneralCourse(title: courseTitle, id: courseId);
+            .addGeneralCourseByInfo(title: courseTitle, id: courseId);
       } else {
         _semester[semesterIndex]
-            .addSpecializedCourse(title: courseTitle, id: courseId);
+            .addSpecializedCourseByInfo(title: courseTitle, id: courseId);
       }
     }
   }
