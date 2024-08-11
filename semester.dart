@@ -54,4 +54,7 @@ class Semester {
   String toString() {
     return 'id: $id , title: $title , course: $_courses';
   }
+
+  // Getters
+  List<Course> get courses => _courses;
 }
