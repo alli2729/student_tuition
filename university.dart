@@ -52,11 +52,11 @@ class University {
     final semesterFound = semesterIndex != -1;
     if (semesterFound) {
       if (courseUnitCount == 2) {
-        _semester[semesterIndex]
-            .addGeneralCourseByInfo(title: courseTitle, id: courseId);
+        _semester[semesterIndex].addGeneralCourseByInfo(
+            title: courseTitle, id: courseId, unitCount: courseUnitCount);
       } else {
-        _semester[semesterIndex]
-            .addSpecializedCourseByInfo(title: courseTitle, id: courseId);
+        _semester[semesterIndex].addSpecializedCourseByInfo(
+            title: courseTitle, id: courseId, unitCount: courseUnitCount);
       }
     }
   }

@@ -4,12 +4,15 @@ abstract class Course {
   // Variables
   final String title;
   final int id;
+  final int unitCount;
   static final List<Student> _studentInCourse = [];
+  final double costFactor = 0;
 
   // Constractor
   Course({
     required this.title,
     required this.id,
+    required this.unitCount,
   });
 
   // Methods

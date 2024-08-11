@@ -8,6 +8,7 @@ class GeneralCourse extends Course {
   GeneralCourse({
     required super.title,
     required super.id,
+    required super.unitCount,
   });
 
   // Methods
@@ -15,4 +16,7 @@ class GeneralCourse extends Course {
   String toString() {
     return 'title: $title, id: $id, unitCount: $unitCount';
   }
+
+  @override
+  double get costFactor => 1;
 }

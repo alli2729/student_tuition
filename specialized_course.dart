@@ -8,6 +8,7 @@ class SpecializedCourse extends Course {
   SpecializedCourse({
     required super.title,
     required super.id,
+    required super.unitCount,
   });
 
   // Methods
@@ -15,4 +16,7 @@ class SpecializedCourse extends Course {
   String toString() {
     return 'title: $title, id: $id, unitCount: $unitCount';
   }
+
+  @override
+  double get costFactor => 2;
 }

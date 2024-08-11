@@ -16,13 +16,22 @@ class Semester {
   });
 
   // Methods
-  void addGeneralCourseByInfo({required String title, required int id}) {
-    final newCourse = GeneralCourse(title: title, id: id);
+  void addGeneralCourseByInfo({
+    required String title,
+    required int id,
+    required int unitCount,
+  }) {
+    final newCourse = GeneralCourse(title: title, id: id, unitCount: unitCount);
     _courses.add(newCourse);
   }
 
-  void addSpecializedCourseByInfo({required String title, required int id}) {
-    final newCourse = SpecializedCourse(title: title, id: id);
+  void addSpecializedCourseByInfo({
+    required String title,
+    required int id,
+    required int unitCount,
+  }) {
+    final newCourse =
+        SpecializedCourse(title: title, id: id, unitCount: unitCount);
     _courses.add(newCourse);
   }
 
