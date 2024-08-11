@@ -65,8 +65,30 @@ void main(List<String> args) {
   taaviUniversity.addStudent(student: s2);
   taaviUniversity.addStudent(student: s3);
 
+  // add student to course
   taaviUniversity.addStudentToCourse(
-      studentId: 1, semesterId: 1403, courseId: 1001);
+    studentId: 1,
+    semesterId: 1403,
+    courseId: 1001,
+  );
+
+  taaviUniversity.addStudentToCourse(
+    studentId: 1,
+    semesterId: 1403,
+    courseId: 1002,
+  );
+
+  taaviUniversity.addStudentToCourse(
+    studentId: 1,
+    semesterId: 1403,
+    courseId: 1003,
+  );
+
+  taaviUniversity.addStudentToCourse(
+    studentId: 1,
+    semesterId: 1403,
+    courseId: 2001,
+  );
 
   // print(taaviUniversity.Semesters[0]
   //     .getCourseById(courseId: 1001)!
@@ -78,5 +100,6 @@ void main(List<String> args) {
     uni: taaviUniversity,
   );
 
-  print(s.calculate(studentId: 1, semesterId: 1403));
+  int total = s.calculate(studentId: 1, semesterId: 1403);
+  print('total cost: $total');
 }
