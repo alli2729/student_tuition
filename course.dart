@@ -5,7 +5,7 @@ abstract class Course {
   final String title;
   final int id;
   final int unitCount;
-  static final List<Student> _studentInCourse = [];
+  final List<Student> _studentInCourse = [];
   final double costFactor = 0;
 
   // Constractor
@@ -26,5 +26,5 @@ abstract class Course {
   }
 
   // Getters
-  static List<Student> get studentInCourse => _studentInCourse;
+  List<Student> get studentInCourse => _studentInCourse;
 }

@@ -1,3 +1,4 @@
+import 'course.dart';
 import 'location.dart';
 import 'semester.dart';
 import 'student.dart';
@@ -66,9 +67,22 @@ class University {
     required int semesterId,
     required int courseId,
   }) {
+    // find semester index
     final int semesterIndex =
         _semester.indexWhere((element) => element.id == semesterId);
-    final semesterFound = semesterIndex != -1;
+    final isSemesterFound = semesterIndex != -1;
+    // find student index
+    final int studentIndex =
+        _students.indexWhere((element) => element.id == studentId);
+    final isStudentFound = studentIndex != -1;
+    // if both has founded
+    if (isStudentFound && isSemesterFound) {
+      final semester = _semester[semesterIndex];
+
+      final Course? course = semester.getCourseById(courseId: courseId);
+
+      course?.addStudent(_students[studentIndex]);
+    }
   }
 
   // Getters

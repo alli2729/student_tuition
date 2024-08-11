@@ -39,18 +39,20 @@ class Semester {
     _courses.add(course);
   }
 
-  void addStudentToCourse({required Student student}) {
-    Course.studentInCourse.add(student);
-  }
-
   Course getCourseById({required int courseId}) {
     final courseIndex =
         _courses.indexWhere((element) => element.id == courseId);
-        
+    final isCourseFound = courseIndex != -1;
+
+    if (isCourseFound) {
+      return _courses[courseIndex];
+    }
+
+    return _courses[-1];
   }
 
   @override
   String toString() {
-    return 'id: $id , title: $title , course: $_courses, Students :${Course.studentInCourse}';
+    return 'id: $id , title: $title , course: $_courses';
   }
 }
