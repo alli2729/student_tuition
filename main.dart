@@ -23,11 +23,37 @@ void main(List<String> args) {
   taaviUniversity.addSemester(semester: summer2024);
 
   // add new cource to (2024 summer) semester
-  Course math1 = SpecializedCourse(title: 'Math1', id: 1001, unitCount: 3);
-  Course pingPong = GeneralCourse(title: 'Ping Pong', id: 1002, unitCount: 2);
+  Course math1 = SpecializedCourse(
+    title: 'Math1',
+    id: 1001,
+    unitCount: 3,
+  );
+  Course algorithm = SpecializedCourse(
+    title: 'Algorithm',
+    id: 1002,
+    unitCount: 3,
+  );
+  Course database = SpecializedCourse(
+    title: 'Database',
+    id: 1003,
+    unitCount: 3,
+  );
+  Course english = GeneralCourse(
+    title: 'English',
+    id: 2001,
+    unitCount: 2,
+  );
+  Course pingPong = GeneralCourse(
+    title: 'Ping Pong',
+    id: 2002,
+    unitCount: 2,
+  );
 
   taaviUniversity.Semesters.first.addCourse(course: math1);
   taaviUniversity.Semesters.first.addCourse(course: pingPong);
+  taaviUniversity.Semesters.first.addCourse(course: algorithm);
+  taaviUniversity.Semesters.first.addCourse(course: english);
+  taaviUniversity.Semesters.first.addCourse(course: database);
 
   // add students
   Student s1 = Student(name: 'ali karimi', id: 1, location: shiraz);
@@ -48,6 +74,6 @@ void main(List<String> args) {
     semester: summer2024,
     uni: taaviUniversity,
   );
-  
+
   print(s.calculate(studentId: 1, semesterId: 1403));
 }
