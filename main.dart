@@ -5,6 +5,7 @@ import 'semester.dart';
 import 'specialized_course.dart';
 import 'student.dart';
 import 'university.dart';
+import 'student_tuition.dart';
 
 void main(List<String> args) {
   // shiraz
@@ -38,7 +39,15 @@ void main(List<String> args) {
   taaviUniversity.addStudentToCourse(
       studentId: 1, semesterId: 1403, courseId: 1001);
 
-  print(taaviUniversity.Semesters[0]
-      .getCourseById(courseId: 1001)!
-      .studentInCourse);
+  // print(taaviUniversity.Semesters[0]
+  //     .getCourseById(courseId: 1001)!
+  //     .studentInCourse);
+
+  StudentTuition s = StudentTuition(
+    student: s1,
+    semester: summer2024,
+    uni: taaviUniversity,
+  );
+  
+  print(s.calculate(studentId: 1, semesterId: 1403));
 }
