@@ -58,9 +58,12 @@ void main(List<String> args) {
   // add students
   Student s1 = Student(name: 'ali karimi', id: 1, location: shiraz);
   Student s2 = Student(name: 'sina rezaei', id: 2, location: shiraz);
+  Student s3 = Student(
+      name: 'shayan zare', id: 3, location: Location(title: 'tehran', id: 0));
 
   taaviUniversity.addStudent(student: s1);
   taaviUniversity.addStudent(student: s2);
+  taaviUniversity.addStudent(student: s3);
 
   taaviUniversity.addStudentToCourse(
       studentId: 1, semesterId: 1403, courseId: 1001);
