@@ -32,6 +32,7 @@ class StudentTuition {
       for (var course in semester.courses) {
         // if student has course
         if (course.studentInCourse.contains(student)) {
+          print(course);
           totalUnits += course.unitCount;
         }
       }
