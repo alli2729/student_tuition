@@ -61,6 +61,16 @@ class University {
     }
   }
 
+  void addStudentToCourse({
+    required int studentId,
+    required int semesterId,
+    required int courseId,
+  }) {
+    final int semesterIndex =
+        _semester.indexWhere((element) => element.id == semesterId);
+    final semesterFound = semesterIndex != -1;
+  }
+
   // Getters
   List<Semester> get Semesters => _semester;
   List<Student> get Students => _students;

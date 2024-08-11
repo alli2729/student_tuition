@@ -43,6 +43,12 @@ class Semester {
     Course.studentInCourse.add(student);
   }
 
+  Course getCourseById({required int courseId}) {
+    final courseIndex =
+        _courses.indexWhere((element) => element.id == courseId);
+        
+  }
+
   @override
   String toString() {
     return 'id: $id , title: $title , course: $_courses, Students :${Course.studentInCourse}';
