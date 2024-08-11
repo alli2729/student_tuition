@@ -85,6 +85,30 @@ class University {
     }
   }
 
+  Semester? getSemesterById({required int semesterId}) {
+    final semesterIndex =
+        _semester.indexWhere((element) => element.id == semesterId);
+    final isSemesterFound = semesterIndex != -1;
+
+    if (isSemesterFound) {
+      return _semester[semesterIndex];
+    }
+
+    return null;
+  }
+
+  Student? getStudentById({required int studentId}) {
+    final studentIndex =
+        _students.indexWhere((element) => element.id == studentId);
+    final isStudentFound = studentIndex != -1;
+
+    if (isStudentFound) {
+      return _students[studentIndex];
+    }
+
+    return null;
+  }
+
   // Getters
   List<Semester> get Semesters => _semester;
   List<Student> get Students => _students;
