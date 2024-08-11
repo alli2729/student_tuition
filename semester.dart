@@ -1,7 +1,6 @@
 import 'course.dart';
 import 'general_course.dart';
 import 'specialized_course.dart';
-import 'student.dart';
 
 class Semester {
   // Variable
@@ -39,7 +38,7 @@ class Semester {
     _courses.add(course);
   }
 
-  Course getCourseById({required int courseId}) {
+  Course? getCourseById({required int courseId}) {
     final courseIndex =
         _courses.indexWhere((element) => element.id == courseId);
     final isCourseFound = courseIndex != -1;
@@ -48,7 +47,7 @@ class Semester {
       return _courses[courseIndex];
     }
 
-    return _courses[-1];
+    return null;
   }
 
   @override
