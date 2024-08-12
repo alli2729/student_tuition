@@ -6,7 +6,7 @@ abstract class Course {
   final int id;
   final int unitCount;
   final List<Student> _studentInCourse = [];
-  final double costFactor = 0;
+  final int costFactor = 0;
 
   // Constractor
   Course({
@@ -18,7 +18,7 @@ abstract class Course {
   // Methods
   @override
   String toString() {
-    return 'title: $title , id: $id';
+    return 'title: $title , id: $id ,cost factor: $costFactor';
   }
 
   void addStudent(Student student) {

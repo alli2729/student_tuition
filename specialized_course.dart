@@ -14,9 +14,9 @@ class SpecializedCourse extends Course {
   // Methods
   @override
   String toString() {
-    return 'title: $title, id: $id, unitCount: $unitCount';
+    return 'title: $title, id: $id, unitCount: $unitCount, cost factor: $costFactor';
   }
 
   @override
-  double get costFactor => 2;
+  int get costFactor => 2;
 }

@@ -28,12 +28,14 @@ class StudentTuition {
       // else
       if (student.location != uni.location) costPerUnit = 125;
 
+      int totalCost = 0;
       int totalUnits = 0;
       for (var course in semester.courses) {
         // if student has course
         if (course.studentInCourse.contains(student)) {
           print(course);
           totalUnits += course.unitCount;
+          totalCost += (course.unitCount * course.costFactor * costPerUnit);
         }
       }
 
@@ -41,11 +43,11 @@ class StudentTuition {
       print('costPerUnit :$costPerUnit');
 
       // calculation
-      int totalcost = costPerUnit * totalUnits;
+      // int totalcost = costPerUnit * totalUnits;
 
-      if (totalUnits < 7) totalcost += 100;
+      if (totalUnits < 7) totalCost += 100;
 
-      return totalcost;
+      return totalCost;
     }
     return -1;
   }
